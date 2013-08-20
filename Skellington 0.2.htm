@@ -1,0 +1,100 @@
+
+<!-- saved from url=(0048)http://h4xrk1m.com/stff/moosader/skellington.htm -->
+<html><object type="{0C55C096-0F1D-4F28-AAA2-85EF591126E7}" cotype="cs" id="cosymantecbfw" style="width: 0px; height: 0px; display: block;"></object><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Skellington 0.2</title>
+<style> pre {font-family: monospace; tab-size: 4; -moz-tab-size: 4;} </style>
+<script type="text/javascript" id="waxCS">var WAX = function () { var _arrInputs; window.addEventListener('waxSetArr', function(evt) {_arrInputs=evt.detail;}); return { getElement: function (i) { return _arrInputs[i]; } } }(); function waxGetElement(i) { return WAX.getElement(i); }</script></head><body><pre>Game skellington v0.2
+
+There's an absolute assload of ways to do this. I chose this because it's fairly clear
+and easy to modify. Best of luck
+
+Notes:
+ -	You may want to make a way to pass numbers and strings on to the graphics object.
+	This would include health bars, messages, titles, maybe coordinates, chat..
+	Anything you'd want to display to the user.
+	
+ -	Graphics should have a destructor that cleans up sprites and stuff after itself.
+
+ -	The tile highlighting may or may not be misplaced; you may want to do
+	that while you draw the tiles.
+
+ -	Good video on the subject:  <a href="http://www.youtube.com/watch?v=OxiJtyXLc98">http://www.youtube.com/watch?v=OxiJtyXLc98</a>
+
+ -	Here's an example on how to make an fps timer:
+	<a href="http://www.libsdl.org/intro.en/usingtimers.html">http://www.libsdl.org/intro.en/usingtimers.html</a>
+
+</pre>
+<hr>
+<pre>MouseCoords (this could be a simple struct)
+---
+ + x: int			--	The pixel you're hovering over
+ + y: int
+ + tileX: int		--	The tile you're hovering over (you may want to correct
+ + tileY: int		--	for offsets, in case the map scrolls)
+</pre>
+<hr>
+<pre>Logic
+---
+ - *g: Graphics					--	The graphics object (when placed in logic, make sure it gets a pointer to mouseCoords)
+ - *world: World				--	Your map
+ - *units: UnitHandler			--	Something to stick your units in. Could be a simple 2D array
+ - *buildings: BuildingHandler	--	Same as units. Could be a 2D array.
+ - mouseCoords: MouseCoords		--	The coordinates of the mouse (see above)
+
+								--	This is where you'd put things like menu handlers,
+								--	and whatever else you might want in the game.
+---
+ + Logic()
+ + Logic( &amp;g, &amp;world, &amp;units, &amp;buildings )
+ 
+ + setWorld( world ): void			--	You can make set functions for most of the members if you think you'll need them.
+ + setGraphics( g ): void			--	The constructor is able to handle it, though.
+
+ - updateMouseCoords( x, y ): void	--	Update the mouse position (called from run() when the mouse moves)
+ - handleMouseClick( button ): void	--	Not sure if you want to be able to drag and drop things. This function may or may not work for you.
+
+ + run(): void						--	update everything, call g.draw(), sleep to maintain fps
+</pre>
+<hr>
+<pre>Graphics
+---
+ - *display: Display				--	The thing you flip to update the screen
+ - *mouseCoords: MouseCoords		--	A pointer to the mouseCoords in Logic
+
+ -- Pointers to the stuff already in Logic, for quick and easy access
+ -- Not the cleanest way of doing it, however, since Graphics could tecnically modify the content
+ - *world: World
+ - *units: UnitHandler
+ - *buildings: BuildingHandler
+ - *mouseCoords: MouseCoords
+
+---
+ - Graphics()						--	Both constructors should initialize the display
+ - Graphics( &amp;world, &amp;units, &amp;buildings )
+ - setMouseCoords( &amp;mouseCoords )	--	Attach the mouseCoords struct from Logic
+ 
+ - drawWorld(): void				--	Draw the ground
+ - drawBuildings(): void			--	Draw buildings
+ - drawUnits(): void				--	Draw units
+ - drawHud(): void					--	Highlight the tile you're hovering over, draw the HUD, and then draw the mouse
+
+ + draw(): void						--	Basically just call the other draw functions in that order
+									--	I would make a separate draw function just for drawing the menu
+</pre>
+<hr>
+<pre>main() example (c++):
+
+int main() {
+
+	World			world();
+	UnitHandler		units();
+	BuildingHandler	buildings();
+	
+	Graphics g( world, units, buildings );
+	Logic logic( g, world, units, buildings );
+	
+	logic.run();
+	
+	return 0;
+}
+</pre>
+</body></html>
