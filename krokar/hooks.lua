@@ -32,3 +32,8 @@ hook('one-third-column', function(_, children)
   title = table.remove(children, 1)
   return '<div class="one-third column"><h3>' .. title .. '</h3>' .. table.concat(children, '') .. '</div>'
 end)
+
+hook('center-p', function(_, children)
+  title = table.remove(children, 1)
+  return '<p style="text-align: center">' .. table.concat(children, '') .. '<div>'
+end)
