@@ -1,6 +1,8 @@
 
 (div (@ (class "row"))
-     (h1 "Skellington")
+     (h1 (@ (class "remove-bottom")
+            (style "margin-top: 40px"))
+         "Skellington")
      (h5 "Simple language agnostic game base") ;; SLAGBase?
      (hr))
 
