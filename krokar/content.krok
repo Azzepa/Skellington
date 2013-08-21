@@ -29,8 +29,8 @@
 (row "Some sample source code..."
      (p "main.cpp") 
      (p "This is an extremely simple showing of how, with our base, your main function would look"
-         "Looks simple right? Good! That's how it's meant to be, and can be applied to any language"
-         "Have a look at the next page when your ready to find out how the magic happens!")
+        " Looks simple right? Good! That's how it's meant to be, and can be applied to any language"
+        " Have a look at the next page when your ready to find out how the magic happens!")
      (load-code "snippets/main.cpp")
      (hr))
 
@@ -39,9 +39,10 @@
      (hr))
 
 (row "Integrating Scripting Languages"
-     (p "You could also add a scripting langage so that you can change all th Logic and Management functions
-        outside the actual program")
+     (p "You could also add a scripting langage so that you can change all th Logic and Management functions"
+        " outside the actual program")
      (hr))
+
 (row "Our Implementation")
      (p "Here's how we have done it")
      ;; Or do we include this 
