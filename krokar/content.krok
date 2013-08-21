@@ -1,8 +1,11 @@
 
 (div (@ (class "row"))
      (h1 "Skellington")
-     (h5 "Simple language agnostic game base")
+     (h5 "Simple language agnostic game base") ;; SLAGBase?
      (hr))
+
+
+;; We'll need an index of sorts to help us navigate between titles
 
 
 (one-third-column "What is this?"
