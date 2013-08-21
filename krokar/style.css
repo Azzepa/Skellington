@@ -1,0 +1,7 @@
+pre {
+  border: 1px dashed #BBB !important;
+  padding: 15px !important;
+  overflow: hidden  !important;
+  
+  font-family: monospace !important;
+}
