@@ -1,0 +1,26 @@
+
+
+(one-third-column "What is this?"
+                  (p "This is a language agnostic base for simple games."))
+
+(one-third-column "Why did you make this?"
+                  (p "To learn and to teach others what we've learned."))
+
+(one-third-column "If it's language agnostic..."
+                  (p "...why are we using C++ and SDL?"
+                     "Well, we've got to use something, right?")
+                  
+(hr)
+
+(row "Some title here"
+     (p "And some text here")
+     (hr))
+
+(row "Some title here"
+     (p "And some text here")
+     (hr))
+
+(row "Some title here"
+     (p "And some text here")
+     (hr))
+

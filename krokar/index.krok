@@ -1,0 +1,35 @@
+(load "html5.lua"
+      "hooks.lua")
+
+(raw-header "Content-Type: text/html; charset=UTF-8")
+(doctype 5)
+
+(html (@ (lang "en"))
+      (head
+        (meta (@ (charset "utf-8")))
+        
+        (title "Skellington")
+        
+        (meta (@ (description "Skellington")))
+        
+        (meta (@ (name "viewport")
+                 (content "width=device-width, initial-scale=1, maximum-scale=1")))
+        
+        (css "stylesheets/base.css"
+             "stylesheets/skeleton.css"
+             "stylesheets/layout.css")
+        
+        ;; Code highlighting for <pre> tags
+        (css "prettify/prettify.css")
+        (js "prettify/run_prettify.js?lang=lisp&amp;lang=lua&amp;skin=default")
+        
+        ;; Our own style sheet to override the others
+        (css "style.css"))
+        
+      (body
+        (div (@ (class "container"))
+             (load-template "content.krok")
+             (div (@ (class "row")
+                     (style "text-align: right;"))
+                  "Copyright &copy 2013; Kim Hermansson, Samuel Perry"))))
+
