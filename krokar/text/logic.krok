@@ -1,0 +1,9 @@
+(row "Some sample source code..."
+     (p "This is the class that knows the rules of your game."
+        " This is the only place where things should be allowed to change."
+        " It's also responsible for telling Graphics when it's time to draw,"
+        " and to maintain FPS.")
+
+     (p "UML for logic.cpp")
+     (load-code "text/logic.uml") ;; Keep in mind: Paths are relative to index.krok
+     (hr))

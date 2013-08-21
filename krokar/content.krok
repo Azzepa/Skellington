@@ -1,0 +1,53 @@
+
+;; Probably turn this block into (page-header "title" "subtitle")
+(div (@ (class "row"))
+     (h1 (@ (class "remove-bottom")
+            (style "margin-top: 40px"))
+         "Skellington")
+     (h5 "Simple language agnostic game base") ;; SLAGBase?
+     (hr))
+
+
+;; We'll need an index of sorts to help us navigate between titles
+
+
+(one-third-column "What is this?"
+                  (p "This is a language agnostic base for simple games."))
+
+(one-third-column "Why make it?"
+                  (p "It's an effort to both teach and learn,"
+                     " as well as to share our conclusions with others."))
+
+(one-third-column "We said agnostic..."
+                  (p "...so why are we using C++ and SDL?"
+                     " Well, we've got to use something, right?"
+                     " We're not trying to show you what to write,"
+                     " but how."))
+                  
+(hr)
+
+(row "Some sample source code..."
+     (p "main.cpp") 
+     (p "This is an extremely simple showing of how, with our base, your main function would look"
+        " Looks simple right? Good! That's how it's meant to be, and can be applied to any language"
+        " Have a look at the next page when your ready to find out how the magic happens!")
+     (load-code "snippets/main.cpp")
+     (hr))
+
+(row "Other Language Implementations"
+     (p "Insert here som other simple ways of implementing it in other languages...")
+     (hr))
+
+(row "Integrating Scripting Languages"
+     (p "You could also add a scripting langage so that you can change all th Logic and Management functions"
+        " outside the actual program")
+     (hr))
+
+(row "Our Implementation"
+     (p "Here's how we have done it")
+     (hr))
+     ;; Or do we include this
+     ;; Yes, we should probably put all the sections in their own files -- SS
+
+(load-template "text/logic.krok")
+
