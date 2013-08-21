@@ -43,6 +43,6 @@
         " outside the actual program")
      (hr))
 
-(row "Our Implementation")
-     (p "Here's how we have done it")
+(row "Our Implementation"
+     (p "Here's how we have done it"))
      ;; Or do we include this 
