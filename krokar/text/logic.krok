@@ -1,4 +1,4 @@
-(row "Some sample source code..."
+(row "The logic class"
      (p "This is the class that knows the rules of your game."
         " This is the only place where things should be allowed to change."
         " It's also responsible for telling Graphics when it's time to draw,"

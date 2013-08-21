@@ -49,5 +49,7 @@
      ;; Or do we include this
      ;; Yes, we should probably put all the sections in their own files -- SS
 
+
+;; The logic class
 (load-template "text/logic.krok")
 
