@@ -3,8 +3,8 @@ int main() {
   UnitHandler units();
   BuildingHandler buildings();
   
-  Graphics g(world, units, buildings);
-  Logic logic(g, world, units, buildings);
+  Graphics graphics(world, units, buildings);
+  Logic logic(&graphics, world, units, buildings);
   
   logic.run();
   
