@@ -1,14 +1,22 @@
 
+(div (@ (class "row"))
+     (h1 "Skellington")
+     (h5 "Simple language agnostic game base")
+     (hr))
+
 
 (one-third-column "What is this?"
                   (p "This is a language agnostic base for simple games."))
 
-(one-third-column "Why did you make this?"
-                  (p "To learn and to teach others what we've learned."))
+(one-third-column "Why make it?"
+                  (p "It's an effort to both teach and learn,"
+                     " as well as to share our conclusions with others."))
 
-(one-third-column "If it's language agnostic..."
-                  (p "...why are we using C++ and SDL?"
-                     "Well, we've got to use something, right?")
+(one-third-column "We said agnostic..."
+                  (p "...so why are we using C++ and SDL?"
+                     " Well, we've got to use something, right?"
+                     " We're not trying to show you what to write,"
+                     " but how."))
                   
 (hr)
 

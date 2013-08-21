@@ -21,7 +21,7 @@
         
         ;; Code highlighting for <pre> tags
         (css "prettify/prettify.css")
-        (js "prettify/run_prettify.js?lang=lisp&amp;lang=lua&amp;skin=default")
+        (js "prettify/run_prettify.js?skin=default")
         
         ;; Our own style sheet to override the others
         (css "style.css"))
@@ -31,5 +31,5 @@
              (load-template "content.krok")
              (div (@ (class "row")
                      (style "text-align: right;"))
-                  "Copyright &copy 2013; Kim Hermansson, Samuel Perry"))))
+                  "Copyright &copy; 2013 Kim Hermansson, Samuel Perry"))))
 
