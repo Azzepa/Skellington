@@ -20,8 +20,9 @@
                   
 (hr)
 
-(row "Some title here"
-     (p "And some text here")
+(row "Some source code here"
+     (p "main.cpp")
+     (load-code "snippets/main.cpp")
      (hr))
 
 (row "Some title here"

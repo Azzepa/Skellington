@@ -8,31 +8,7 @@ local function escapehtml(data)
   return data
 end
 
-hook('pretty-lua', function(_, children)
-  local out = {}
-  local insert = table.insert
-  for _, path in ipairs(children) do
-    local file = assert(io.open(path, 'r'))
-    local data = file:read('*all')
-    file:close()
-    insert(out, '<pre class="prettyprint lang-lua">' .. escapehtml(data) .. '</pre>')
-  end
-  return table.concat(out, "<br />")
-end)
-
-hook('pretty-krok', function(_, children)
-  local out = {}
-  local insert = table.insert
-  for _, path in ipairs(children) do
-    local file = assert(io.open(path, 'r'))
-    local data = file:read('*all')
-    file:close()
-    insert(out, '<pre class="prettyprint lang-lisp">' .. escapehtml(data) .. '</pre>')
-  end
-  return table.concat(out, "<br />")
-end)
-
-hook('pretty-text', function(_, children)
+hook('load-code', function(_, children)
   local out = {}
   local insert = table.insert
   for _, path in ipairs(children) do
@@ -43,7 +19,6 @@ hook('pretty-text', function(_, children)
   end
   return table.concat(out, "<br />")
 end)
-
 
 -- TODO: We'll need some hooks around the various divs you can make in Skeleton
 
