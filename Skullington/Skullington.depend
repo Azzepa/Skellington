@@ -10,7 +10,7 @@
 	"lualib.h"
 	"lauxlib.h"
 
-1377179457 source:c:\users\samuel\documents\github\skellington\skullington\main.cpp
+1377209536 source:c:\users\samuel\documents\github\skellington\skullington\main.cpp
 	"Library.h"
 
 1377202454 c:\users\samuel\documents\github\skellington\skullington\library.h
@@ -23,7 +23,13 @@
 	"SettingsManager.h"
 	"SkullSys.h"
 
-1377202468 c:\users\samuel\documents\github\skellington\skullington\settingsmanager.h
+1377208590 c:\users\samuel\documents\github\skellington\skullington\settingsmanager.h
 
 1377202391 c:\users\samuel\documents\github\skellington\skullington\skullsys.h
+
+1377209856 source:c:\users\samuel\documents\github\skellington\skullington\skullsys.cpp
+	"Library.h"
+
+1377209317 source:c:\users\samuel\documents\github\skellington\skullington\settingsmanager.cpp
+	"Library.h"
 

@@ -8,6 +8,7 @@ SettingsManager::SettingsManager()
     {
         std::cout << "Error Starting Lua" << std::endl;
     }
+    luaL_openlibs(lua);
 }
 
 SettingsManager::~SettingsManager()
@@ -15,14 +16,32 @@ SettingsManager::~SettingsManager()
     lua_close(lua);
 }
 
+void SettingsManager::LuaRunMethod(std::string method)
+{
+    lua_getglobal(lua, "runMethod");
+    lua_pushstring(lua, method.c_str());
+    lua_call(lua, 1, 0);
+}
+
+int SettingsManager::LuaGetValueFrom(std::string method)
+{
+    lua_getglobal(lua, "getValueFrom");
+    lua_pushstring(lua, method.c_str());
+    lua_call(lua, 1, 1);
+
+    int returnValue = lua_tointeger(lua, 1);
+    lua_pop(lua, 1);
+    return returnValue;
+}
+
 void SettingsManager::RunScript(std::string file, std::string method)
 {
     luaL_dofile(lua, file.c_str());
-    runMethod(method.c_str);
+    LuaRunMethod(method);
 }
 
 int SettingsManager::RunScriptWithReturn(std::string file, std::string method)
 {
     luaL_dofile(lua, file.c_str());
-    return getValueFrom(method.c_str());
+    return LuaGetValueFrom(method);
 }
