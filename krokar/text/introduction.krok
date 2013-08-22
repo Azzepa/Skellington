@@ -23,7 +23,7 @@
        "..."))
   
   (one-half-column "Disadvantages"
-    (center-p "We can't find any, can you?"))
+    (p "We can't find any, can you?"))
   
 (hr)
 
