@@ -50,5 +50,5 @@ hook('one-third-column', function(_, children)
 end)
 
 hook('center-p', function(_, children)
-  return '<p style="text-align: center">' .. table.concat(children, '') .. '<div>'
+  return '<p style="text-align: center">' .. table.concat(children, '') .. '</p>'
 end)
