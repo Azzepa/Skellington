@@ -20,7 +20,7 @@
     
     (p "Easy to understand" (br)
        "Simple to code" (br)
-       "...")
+       "..."))
   
   (one-half-column "Disadvantages"
     (center-p "We can't find any, can you?"))
