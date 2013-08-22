@@ -5,3 +5,8 @@ pre {
   
   font-family: monospace !important;
 }
+
+/* This should remove the underlines from anchors (headers and such) */
+a[name] {
+  text-decoration: none;
+}
