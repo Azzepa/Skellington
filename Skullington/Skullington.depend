@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1377177098 source:c:\users\samuel\documents\programming\skullington\main.cpp
+	"Library.h"
+
+1377177090 c:\users\samuel\documents\programming\skullington\library.h
+	<iostream>
+	<fstream>
+	<limits>
+	"lua.h"
+	"lualib.h"
+	"lauxlib.h"
+
