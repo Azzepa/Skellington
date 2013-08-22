@@ -39,20 +39,19 @@
      (hr))
 
 (row "Other Language Implementations"
-     (p "Insert here som other simple ways of implementing it in other languages...")
+     (p "Insert here some other simple ways of implementing it in other languages...")
      (hr))
 
 (row "Integrating Scripting Languages"
-     (p "You could also add a scripting langage so that you can change all th Logic and Management functions"
+     (p "You could also add a scripting langage so that you can change all the Logic and Management functions"
         " outside the actual program")
      (hr))
 
 (row "Our Implementation"
      (p "Here's how we have done it")
+     ;; Link to Git Repo?
+     ;; A seperate one that is
      (hr))
-     ;; Or do we include this
-     ;; Yes, we should probably put all the sections in their own files -- SS
-
 
 ;; The logic class
 (load-template "text/logic.krok")
