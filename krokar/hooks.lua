@@ -22,15 +22,22 @@ end)
 
 -- TODO: We'll need some hooks around the various divs you can make in Skeleton
 
+
+local function anchor(title, tag)
+  local tag = tag or "h3"
+  local name = title:gsub('[^%w]+', ''):lower()
+  return ('<a name="%s"><%s>%s</%s></a>'):format(name, tag, title, tag)
+end
+
 -- div class="row"
 hook('row', function(_, children)
-  title = table.remove(children, 1)
-  return '<div class="row"><h3>' .. title .. '</h3>' .. table.concat(children, '') .. '</div>'
+  title = anchor(table.remove(children, 1), "h3")
+  return '<div class="row">' .. title .. table.concat(children, '') .. '</div>'
 end)
 
 hook('one-third-column', function(_, children)
-  title = table.remove(children, 1)
-  return '<div class="one-third column"><h3>' .. title .. '</h3>' .. table.concat(children, '') .. '</div>'
+  title = anchor(table.remove(children, 1), "h3")
+  return '<div class="one-third column">' .. title .. table.concat(children, '') .. '</div>'
 end)
 
 hook('center-p', function(_, children)

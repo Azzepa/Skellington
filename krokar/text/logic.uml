@@ -4,7 +4,7 @@ Logic
  - *world: World                --  Your map
  - *units: UnitHandler          --  Something to stick your units in. Could be a simple 2D array
  - *buildings: BuildingHandler  --  Same as units. Could be a 2D array.
- - mouseCoords: MouseCoords     --  The coordinates of the mouse (see above)
+ - mousecoords: MouseCoords     --  The coordinates of the mouse (see above)
 
                                 --  This is where you'd put things like menu handlers,
                                 --  and whatever else you might want in the game.
