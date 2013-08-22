@@ -37,7 +37,11 @@ end)
 
 hook('one-half-column', function(_, children)
   title = anchor(table.remove(children, 1), "h3")
-  return '<div class="one-half column">' .. title .. table.concat(children, '') .. '</div>'
+  
+  -- The stylesheet apparently "divides" containers into up to 16 equal columns,
+  -- where 16 covers the entire width. What we think of by half would then be 8.
+  
+  return '<div class="eight columns">' .. title .. table.concat(children, '') .. '</div>'
 end)
 
 hook('one-third-column', function(_, children)
