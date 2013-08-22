@@ -1,0 +1,15 @@
+(row "An Introduction to the project")
+	(p "Welcome to the Skellington Project! If you read the top three summaries, you'll roughly know what this is"
+	   " so we don't ned to go over that again. But why might you want to use this? Structuring your code is probably"
+	   " one of the hardest things to do, and this is an easy and simple way to do it, without causing any headaches."
+	   " There are also many ways to implement what we say here, so you don't have to follow the code examples. They"
+	   " just happen to be C++, our language of choice for this. You could implement this in C, C#, Java or any"
+	   " language you can think of pretty much."
+	
+	(p "So why structure your program our way?")
+	(one-half-column "Advantages"
+		(p "Easy to understand")
+		(p "Simple to code")
+		(p "..."))
+	(one-half-column "Disadvantages")
+		(p "We can't find any, can you?")
