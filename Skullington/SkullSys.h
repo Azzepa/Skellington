@@ -5,9 +5,12 @@
 class SkullSys
 {
 private:
+    SettingsManager settingsManager;
 public:
     SkullSys();
     ~SkullSys();
+
+    void RunSkullSys();
 };
 
 #endif // SKULL_SYS_INCLUDED

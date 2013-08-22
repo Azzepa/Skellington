@@ -10,3 +10,20 @@
 	"lualib.h"
 	"lauxlib.h"
 
+1377179457 source:c:\users\samuel\documents\github\skellington\skullington\main.cpp
+	"Library.h"
+
+1377202454 c:\users\samuel\documents\github\skellington\skullington\library.h
+	<iostream>
+	<fstream>
+	<limits>
+	"lua.h"
+	"lualib.h"
+	"lauxlib.h"
+	"SettingsManager.h"
+	"SkullSys.h"
+
+1377202468 c:\users\samuel\documents\github\skellington\skullington\settingsmanager.h
+
+1377202391 c:\users\samuel\documents\github\skellington\skullington\skullsys.h
+
