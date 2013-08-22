@@ -35,12 +35,16 @@ hook('row', function(_, children)
   return '<div class="row">' .. title .. table.concat(children, '') .. '</div>'
 end)
 
+hook('one-half-column', function(_, children)
+  title = table.remove(children)
+  return '<div class="one-half column"><h3>' .. title .. '</h3>' .. table.concat(children, '') .. '</div>'
+end)
+
 hook('one-third-column', function(_, children)
   title = anchor(table.remove(children, 1), "h3")
   return '<div class="one-third column">' .. title .. table.concat(children, '') .. '</div>'
 end)
 
 hook('center-p', function(_, children)
-  title = table.remove(children, 1)
   return '<p style="text-align: center">' .. table.concat(children, '') .. '<div>'
 end)

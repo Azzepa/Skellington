@@ -26,6 +26,9 @@
                   
 (hr)
 
+(load-template "text/introduction.krok")
+;; Anything below this I think should be put into a proper category. And I think we need to make a navigation
+;; so that each thing apart from the intro get's it's own page really
 (row "Some sample source code..."
      (p "main.cpp") 
      (p "This is an extremely simple showing of how, with our base, your main function would look"
