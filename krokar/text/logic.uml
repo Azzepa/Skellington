@@ -1,6 +1,6 @@
 Logic
 ---
- - *g: Graphics                 --  The graphics object (when placed in logic, make sure it gets a pointer to mouseCoords)
+ - *graphics: Graphics          --  The graphics object (when placed in logic, make sure it gets a pointer to mouseCoords)
  - *world: World                --  Your map
  - *units: UnitHandler          --  Something to stick your units in. Could be a simple 2D array
  - *buildings: BuildingHandler  --  Same as units. Could be a 2D array.
@@ -10,12 +10,12 @@ Logic
                                 --  and whatever else you might want in the game.
 ---
  + Logic()
- + Logic( &amp;g, &amp;world, &amp;units, &amp;buildings )
+ + Logic(&graphics, &world, &units, &buildings)
  
- + setWorld( world ): void      --  You can make set functions for most of the members if you think you'll need them.
- + setGraphics( g ): void       --  The constructor is able to handle it, though.
+ + setWorld(world): void      --  You can make set functions for most of the members if you think you'll need them.
+ + setGraphics(graphics): void       --  The constructor is able to handle it, though.
 
- - updateMouseCoords( x, y ): void   --  Update the mouse position (called from run() when the mouse moves)
- - handleMouseClick( button ): void  --  Not sure if you want to be able to drag and drop things. This function may or may not work for you.
+ - updateMouseCoords(x, y): void   --  Update the mouse position (called from run() when the mouse moves)
+ - handleMouseClick(button): void  --  Not sure if you want to be able to drag and drop things. This function may or may not work for you.
 
- + run(): void            --  update everything, call g.draw(), sleep to maintain fps
+ + run(): void            --  update everything, call graphics.draw(), sleep to maintain fps
