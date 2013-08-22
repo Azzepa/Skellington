@@ -24,3 +24,9 @@
     (p "We can't find any, can you?"))
   
 (hr)
+
+
+
+
+;; We should probably also talk about what's not in the scope of this project.
+;; Some things I don't want to get knee deep into right now include network play.
