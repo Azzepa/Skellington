@@ -6,25 +6,18 @@
      " just happen to be C++, our language of choice for this. You could implement this in C, C#, Java or any"
      " language you can think of pretty much.")
   
-  (p "So why structure your program our way?"))
+(p "So why structure your program our way?"))
 
-  (one-half-column "Advantages"
-    ;; You could use ol or ul here.
-    ;; (ul (li "Easy to understand")
-    ;;     (li "Simple to code"))
-    ;;
-    ;; This could be turned into (ordered-list) and (unordered-list),
-    ;; but I'm not sure it's worth it.
-    ;;
-    ;; Probably not worth it
-    
-    (p "Easy to understand" (br)
-       "Simple to code" (br)
-       "..."))
+(one-half-column "Advantages"
+  (ul (@ (class "square"))
+      (li "Easy to understand")
+      (li "Simple to write")
+      (li "Etc.")))
   
-  (one-half-column "Disadvantages"
-    (p "We can't find any, can you?"))
-  
+
+(one-half-column "Disadvantages"
+  (p "We can't find any, can you?"))
+
 (hr)
 
 
