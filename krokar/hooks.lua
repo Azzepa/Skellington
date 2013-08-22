@@ -36,8 +36,8 @@ hook('row', function(_, children)
 end)
 
 hook('one-half-column', function(_, children)
-  title = table.remove(children)
-  return '<div class="one-half column"><h3>' .. title .. '</h3>' .. table.concat(children, '') .. '</div>'
+  title = anchor(table.remove(children, 1), "h3")
+  return '<div class="one-half column">' .. title .. table.concat(children, '') .. '</div>'
 end)
 
 hook('one-third-column', function(_, children)
