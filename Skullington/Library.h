@@ -6,6 +6,8 @@
 #include <fstream>
 #include <limits>
 
+#include "SDL.h"
+
 extern "C"
 {
     #include "lua.h"
