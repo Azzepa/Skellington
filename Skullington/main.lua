@@ -20,8 +20,20 @@ function PrintAllValues()
 	print("HardwareRendered: ", hardwareRendered)
 end
 
-function GetScreenHeight()
-	return screenHeight
+function GetWindowHeight()
+	return windowHeight
+end
+
+function GetWindowWidth()
+	return windowWidth
+end
+
+function IsHardwareRendered()
+	return hardwareRendered
+end
+
+function IsFullscreen
+	return fullscreen
 end
 
 function RunMethod(method)
@@ -34,9 +46,9 @@ end
 
 function GetValueFrom(method)
 	if (method == "WindowHeight") then
-		return GetScreenHeight()
+		return GetWindowHeight()
 	elseif (method == "WindowWidth") then
-		return GetScreenWidth()
+		return GetWindowWidth()
 	elseif (method == "HardwareRendered") then
 		return IsHardwareRendered()
 	elseif (method == "IsFullscreen") then
