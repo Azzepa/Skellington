@@ -16,10 +16,10 @@ local settings = {
 
 -- FUNCTION FOR TESTING PURPOSES ONLY
 function PrintAllValues()
-	print("Fullscreen: ", settings[fullscreen])
-	print("Window Height: ", settings[windowHeight])
-	print("Window Width: ", settings[windowWidth])
-	print("HardwareRendered: ", settings[hardwareRendered])
+	print("Fullscreen: ", settings["fullscreen"])
+	print("Window Height: ", settings["windowHeight"])
+	print("Window Width: ", settings["windowWidth"])
+	print("HardwareRendered: ", settings["hardwareRendered"])
 end
 
 function GetSetting(setting)
