@@ -1,39 +1,29 @@
 
+local settings = {
+
 -- THIS IS THE ONLY PLACE YOU NEED TO CHANGE VALUES
 
--- function SetValues() do
-	fullscreen = true
-	windowHeight = 480
-	windowWidth = 640
+	fullscreen = true;
+	windowHeight = 480;
+	windowWidth = 640;
 
 	-- IF YOUR COMPUTER HAS A SLOW GPU CHANGE THIS TO FALSE
-	hardwareRendered = true
--- end
+	hardwareRendered = true;
 
--- DO NOT CHNAGE ANYTHING AFTER THIS LINE
+	-- DO NOT CHANGE ANYTHING AFTER THIS LINE
+
+}
 
 -- FUNCTION FOR TESTING PURPOSES ONLY
 function PrintAllValues()
-	print("Fullscreen: ", fullscreen)
-	print("Window Height: ", windowHeight)
-	print("Window Width: ", windowWidth)
-	print("HardwareRendered: ", hardwareRendered)
+	print("Fullscreen: ", settings[fullscreen])
+	print("Window Height: ", settings[windowHeight])
+	print("Window Width: ", settings[windowWidth])
+	print("HardwareRendered: ", settings[hardwareRendered])
 end
 
-function GetWindowHeight()
-	return windowHeight
-end
-
-function GetWindowWidth()
-	return windowWidth
-end
-
-function IsHardwareRendered()
-	return hardwareRendered
-end
-
-function IsFullscreen
-	return fullscreen
+function GetSetting(setting)
+	return settings[setting]
 end
 
 function RunMethod(method)
