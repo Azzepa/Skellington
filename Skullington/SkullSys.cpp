@@ -13,5 +13,5 @@ SkullSys::~SkullSys()
 
 void SkullSys::RunSkullSys()
 {
-    settingsManager.RunScript("main.lua", "PrintAllValues");
+    settingsManager.LuaRunMethod("main.lua", "PrintAllValues");
 }
