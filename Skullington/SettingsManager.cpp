@@ -10,6 +10,7 @@ SettingsManager::SettingsManager()
     }
     luaL_openlibs(lua);
     luaL_dofile(lua, "main.lua");
+    std::cout << "Lua Started" << std::endl;
 }
 
 SettingsManager::~SettingsManager()

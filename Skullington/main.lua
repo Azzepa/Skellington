@@ -26,24 +26,22 @@ function GetSetting(setting)
 	return settings[setting]
 end
 
-function RunMethod(method)
-	if (method == "setValues") then
-		SetValues()
-	elseif (method == "PrintAllValues") then
+function RunMethod(func)
+	if (func == "PrintAllValues") then
 		PrintAllValues()
 	end
 end
 
-function GetValueFrom(method)
-	if (method == "WindowHeight") then
+function GetValueFrom(func)
+	if (func == "WindowHeight") then
 		return GetWindowHeight()
-	elseif (method == "WindowWidth") then
+	elseif (func == "WindowWidth") then
 		return GetWindowWidth()
-	elseif (method == "HardwareRendered") then
+	elseif (func == "HardwareRendered") then
 		return IsHardwareRendered()
-	elseif (method == "IsFullscreen") then
+	elseif (func == "IsFullscreen") then
 		return IsFullscreen()
 	else
-		return NULL
+		return nil
 	end
 end
