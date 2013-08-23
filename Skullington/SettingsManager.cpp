@@ -18,18 +18,18 @@ SettingsManager::~SettingsManager()
 
 void SettingsManager::LuaRunMethod(std::string method)
 {
-    lua_getglobal(lua, "runMethod");
+    lua_getglobal(lua, "RunMethod");
     lua_pushstring(lua, method.c_str());
     lua_call(lua, 1, 0);
 }
 
 int SettingsManager::LuaGetValueFrom(std::string method)
 {
-    lua_getglobal(lua, "getValueFrom");
+    lua_getglobal(lua, "GetValueFrom");
     lua_pushstring(lua, method.c_str());
     lua_call(lua, 1, 1);
 
-    int returnValue = lua_tointeger(lua, 1);
+    int returnValue = lua_tointeger(lua, -1);
     lua_pop(lua, 1);
     return returnValue;
 }

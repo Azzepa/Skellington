@@ -13,18 +13,18 @@
 -- DO NOT CHNAGE ANYTHING AFTER THIS LINE
 
 -- FUNCTION FOR TESTING PURPOSES ONLY
-function PrintAllValues() do
+function PrintAllValues()
 	print("Fullscreen: ", fullscreen)
 	print("Window Height: ", windowHeight)
 	print("Window Width: ", windowWidth)
 	print("HardwareRendered: ", hardwareRendered)
 end
 
-function GetScreenHeight() do
+function GetScreenHeight()
 	return screenHeight
 end
 
-function RunMethod(method) do
+function RunMethod(method)
 	if (method == "setValues") then
 		SetValues()
 	elseif (method == "PrintAllValues") then
@@ -32,7 +32,7 @@ function RunMethod(method) do
 	end
 end
 
-function GetValueFrom(method) do
+function GetValueFrom(method)
 	if (method == "WindowHeight") then
 		return GetScreenHeight()
 	elseif (method == "WindowWidth") then
