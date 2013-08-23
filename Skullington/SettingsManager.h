@@ -10,8 +10,8 @@ public:
     SettingsManager();
     ~SettingsManager();
 
-    void LuaRunMethod(std::string file, std::string method);
-    int LuaGetValueFrom(std::string file, std::string method);
+    void LuaRunMethod(const std::string &method);
+    int LuaGetValueFrom(const std::string &method);
 };
 
 #endif // SETTINGSMANAGER_H_INCLUDED

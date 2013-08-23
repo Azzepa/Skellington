@@ -12,14 +12,16 @@
   (ul (@ (class "square"))
       (li "Easy to understand")
       (li "Simple to write")
-      (li "Etc.")))
+      (li "Easy to change")
+      (li "Modular")))
   
 
 (one-half-column "Disadvantages"
-  (p "We can't find any, can you?"))
+  (ul (@ (class "square"))
+  	  (li "We can't find any, can you?")))
+
 
 (hr)
-
 
 
 
