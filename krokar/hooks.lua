@@ -66,3 +66,8 @@ hook('column-two-thirds', function(_, children)
 end)
 
 
+hook('bullet-list', function(_, children)
+  local list = #children > 0 and '<li>' .. table.concat(children, '</li><li>') .. '</li>' or ''
+  return '<ul class="square">' .. list .. '</ul>'
+end)
+

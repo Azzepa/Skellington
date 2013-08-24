@@ -9,16 +9,16 @@
 (p "So why structure your program our way?"))
 
 (column-half "Advantages"
-             (ul (@ (class "square"))
-                 (li "Easy to understand")
-                 (li "Simple to write")
-                 (li "Easy to change")
-                 (li "Modular")))
+             
+             (bullet-list "Easy to understand"
+                          "Simple to write"
+                          "Easy to change"
+                          "Modular"))
+             
             
 
 (column-half "Disadvantages"
-             (ul (@ (class "square"))
-                 (li "We can't find any, can you?")))
+             (bullet-list "We can't find any, can you?"))
 
 
 (hr)
