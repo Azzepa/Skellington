@@ -29,26 +29,40 @@ local function anchor(title, tag)
   return ('<a name="%s"><%s>%s</%s></a>'):format(name, tag, title, tag)
 end
 
--- div class="row"
-hook('row', function(_, children)
-  title = anchor(table.remove(children, 1), "h3")
-  return '<div class="row">' .. title .. table.concat(children, '') .. '</div>'
-end)
-
-hook('one-half-column', function(_, children)
-  title = anchor(table.remove(children, 1), "h3")
-  
-  -- The stylesheet apparently "divides" containers into up to 16 equal columns,
-  -- where 16 covers the entire width. What we think of by half would then be 8.
-  
-  return '<div class="eight columns">' .. title .. table.concat(children, '') .. '</div>'
-end)
-
-hook('one-third-column', function(_, children)
-  title = anchor(table.remove(children, 1), "h3")
-  return '<div class="one-third column">' .. title .. table.concat(children, '') .. '</div>'
-end)
 
 hook('center-p', function(_, children)
   return '<p style="text-align: center">' .. table.concat(children, '') .. '</p>'
 end)
+
+
+hook('header', function(_, children)
+  local title = table.remove(children, 1) or "title"
+  local subtitle = table.concat(children, '')
+  return '<div class="sixteen columns"><h1 class="remove-bottom" style="margin-top: 40px;">' .. title .. '</h1><h5>' .. subtitle .. '</h5><hr /></div>'
+end)
+
+
+hook('column', function(_, children)
+  local title = anchor(table.remove(children, 1), "h3")
+  return '<div class="sixteen columns">' .. title .. table.concat(children, '') .. '</div>'
+end)
+
+
+hook('column-half', function(_, children)
+  local title = anchor(table.remove(children, 1), "h3")
+  return '<div class="eight columns">' .. title .. table.concat(children, '') .. '</div>'
+end)
+
+
+hook('column-one-third', function(_, children)
+  local title = anchor(table.remove(children, 1), "h3")
+  return '<div class="one-third column">' .. title .. table.concat(children, '') .. '</div>'
+end)
+
+
+hook('column-two-thirds', function(_, children)
+  local title = anchor(table.remove(children, 1), "h3")
+  return '<div class="two-thirds column">' .. title .. table.concat(children, '') .. '</div>'
+end)
+
+

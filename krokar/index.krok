@@ -29,7 +29,7 @@
       (body
         (div (@ (class "container"))
              (load-template "content.krok")
-             (div (@ (class "row")
+             (div (@ (class "sixteen columns")
                      (style "text-align: right;"))
                   "Copyright &copy; 2013 Kim Hermansson, Samuel Perry"))))
 
