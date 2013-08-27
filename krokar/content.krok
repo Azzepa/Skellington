@@ -1,24 +1,19 @@
 
-;; Probably turn this block into (page-header "title" "subtitle")
-(div (@ (class "row"))
-     (h1 (@ (class "remove-bottom")
-            (style "margin-top: 40px"))
-         "Skellington")
-     (h5 "Simple language agnostic game base") ;; SLAGBase?
-     (hr))
+(header "Skellington"
+        "Simple language agnostic game base")
 
 
 ;; We'll need an index of sorts to help us navigate between titles
 
 
-(one-third-column "What is this?"
+(column-one-third "What is this?"
                   (p "This is a language agnostic base for simple games."))
 
-(one-third-column "Why make it?"
+(column-one-third "Why make it?"
                   (p "It's an effort to both teach and learn,"
                      " as well as to share our conclusions with others."))
 
-(one-third-column "We said agnostic..."
+(column-one-third "We said agnostic..."
                   (p "...so why are we using C++ and SDL?"
                      " Well, we've got to use something, right?"
                      " We're not trying to show you what to write,"
@@ -30,28 +25,28 @@
 ;; Anything below this I think should be put into a proper category. And I think we need to make a navigation
 ;; so that each thing apart from the intro get's it's own page really
 
-(row "Some sample source code..."
-     (p "main.cpp") 
-     (p "This is an extremely simple showing of how, with our base, your main function would look"
-        " Looks simple right? Good! That's how it's meant to be, and can be applied to any language"
-        " Have a look at the next page when your ready to find out how the magic happens!")
-     (load-code "snippets/main.cpp")
-     (hr))
+(column "Some sample source code..."
+        (p "main.cpp") 
+        (p "This is an extremely simple showing of how, with our base, your main function would look"
+           " Looks simple right? Good! That's how it's meant to be, and can be applied to any language"
+           " Have a look at the next page when your ready to find out how the magic happens!")
+        (load-code "snippets/main.cpp")
+        (hr))
 
-(row "Other Language Implementations"
-     (p "Insert here some other simple ways of implementing it in other languages...")
-     (hr))
+(column "Other Language Implementations"
+        (p "Insert here some other simple ways of implementing it in other languages...")
+        (hr))
 
-(row "Integrating Scripting Languages"
-     (p "You could also add a scripting langage so that you can change all the Logic and Management functions"
-        " outside the actual program")
-     (hr))
+(column "Integrating Scripting Languages"
+        (p "You could also add a scripting langage so that you can change all the Logic and Management functions"
+           " outside the actual program")
+        (hr))
 
-(row "Our Implementation"
-     (p "Here's how we have done it")
-     ;; Link to Git Repo?
-     ;; A seperate one that is
-     (hr))
+(column "Our Implementation"
+        (p "Here's how we have done it")
+        ;; Link to Git Repo?
+        ;; A seperate one that is
+        (hr))
 
 ;; The logic class
 (load-template "text/logic.krok")
